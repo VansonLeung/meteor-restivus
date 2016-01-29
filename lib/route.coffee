@@ -130,6 +130,13 @@ class @Route
             endpoint.authRequired = true
           else
             endpoint.authRequired = false
+
+        # Configure auth optional
+        if endpoint.authOptional is undefined
+          if @options?.authOptional
+            endpoint.authOptional = true
+          else
+            endpoint.authOptional = false
         return
     , this
     return
@@ -163,10 +170,10 @@ class @Route
     @returns False if authentication fails, and true otherwise
   ###
   _authAccepted: (endpointContext, endpoint) ->
-    if endpoint.authOptional
-      @_authenticate endpointContext, true
-    else if endpoint.authRequired
+    if endpoint.authRequired
       @_authenticate endpointContext
+    else if endpoint.authOptional
+      @_authenticate endpointContext, true
     else true
 
 
