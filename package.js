@@ -1,7 +1,7 @@
 Package.describe({
   name: 'vansonhk:restivus',
   summary: 'Create authenticated REST APIs in Meteor 0.9+ via HTTP/HTTPS. Setup CRUD endpoints for Collections.',
-  version: '0.8.7',
+  version: '0.8.8',
   git: 'https://github.com/VansonLeung/meteor-restivus.git'
 });
 
