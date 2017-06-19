@@ -30,6 +30,8 @@ class @Restivus
         'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, X-User-Id, X-Auth-Token'
 
       # Set default header to enable CORS if configured
+      if @_config.defaultHeaders['Access-Control-Allow-Headers']
+        corsHeaders['Access-Control-Allow-Headers'] = @_config.defaultHeaders['Access-Control-Allow-Headers']
       _.extend @_config.defaultHeaders, corsHeaders
 
       if not @_config.defaultOptionsEndpoint
