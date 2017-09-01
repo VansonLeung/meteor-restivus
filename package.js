@@ -1,7 +1,7 @@
 Package.describe({
   name: 'vansonhk:restivus',
   summary: 'Create authenticated REST APIs in Meteor 0.9+ via HTTP/HTTPS. Setup CRUD endpoints for Collections.',
-  version: '0.8.9',
+  version: '0.8.10',
   git: 'https://github.com/VansonLeung/meteor-restivus.git'
 });
 
@@ -15,7 +15,7 @@ Package.onUse(function (api) {
   api.use('coffeescript');
   api.use('underscore');
   api.use('accounts-base@1.2.0');
-  api.use('simple:json-routes@1.0.4');
+  api.use('simple:json-routes@=2.0.1');
 
   api.addFiles('lib/auth.coffee', 'server');
   api.addFiles('lib/iron-router-error-to-response.js', 'server');
